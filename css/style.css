@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+:root{
+    --body-black: #212324;
+    --dark-black: #18191a;
+    --purple: #4f46E5;
+    --pink :#FD2D78;
+    --white :#fff;
+    --light-gray-text: #A7A8A8;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: var(--body-black);
+    color: var(--light-gray-text);
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+/* global styles end  */
+
+.header{
+    /* background-color: blue; */
+    width: 100%;
+    /* font-weight: 600; */
+}
+.header__nav{
+    padding: 5px 6%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position:relative;
+}
+.header__nav a.logo{
+    font-size: 35px;
+    position: relative;
+    color: var(--light-gray-text);
+}
+.header__nav a.logo::before{
+    content: "h";
+    /* background-color: red; */
+    width: 100%;
+    top: 0;left: 0;
+    /* font-weight: 6; */
+    height: 100%;
+    color: var(--purple);
+    position: absolute;
+    /* transform: rotate(0deg); */
+    animation: logo-animate 3s infinite;
+}
+@keyframes logo-animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    33.33%{
+        transform: rotate(-25deg);
+    }
+    66%{
+        transform: rotate(25deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.nav__links > i{
+    display: none;
+}
+.nav__links ul li{
+display: inline-block;
+/* background-color: red; */
+list-style: none;
+margin-right: 1rem;
+border-radius: 2rem;
+}
+.nav__links ul li a{
+
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px 15px;
+    color: var(--light-gray-text);
+    border-radius: 20rem;
+    font-weight: 600;
+}
+.nav__links ul li a:hover{
+    background-color: rgb(77, 75, 75);
+}
+.header__nav > i {
+    display: none;
+}
+
+@media screen and (max-width:700px){
+     .nav__links{
+        position: absolute;
+        top: -150px;left: 0;
+    } 
+    .header__nav > i {
+        display: block;
+    }
+}
+
+/* hero section  */
